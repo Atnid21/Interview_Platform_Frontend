@@ -4,28 +4,26 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import HomeLayout from './Layouts/HomeLayout';
-import MeetingLayout from './Layouts/MeetingLayout';
 import Home from './Components/Home';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Feature from './Components/Feature';
+import Meeting from './Components/Meeting';
+import NotFound from './Components/NotFound';
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomeLayout />}>
+      <BrowserRouter>
+        <Routes>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="feature" element={<Feature />} />
-        </Route>
-        <Route path="/meeting" element={<MeetingLayout />} >
-        </Route>
-      </Routes>
-    </BrowserRouter>
+          <Route path="meeting/:meetingId" element={<Meeting />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
