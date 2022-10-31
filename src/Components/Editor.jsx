@@ -30,7 +30,7 @@ function Editor() {
         <>
             <div className='flex'>
                 <AceEditor
-                    mode="CPP"
+                    mode="java"
                     theme="monokai"
                     name="editor"
                     fontSize="20px"
