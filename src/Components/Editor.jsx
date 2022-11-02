@@ -28,7 +28,7 @@ function SelectLanguage() {
 function Editor() {
     return (
         <>
-            <div className='flex'>
+            <div id="meetingLayout" className='flex'>
                 <AceEditor
                     mode="java"
                     theme="monokai"

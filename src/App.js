@@ -12,6 +12,7 @@ const About = lazy(() => import('./Components/About'));
 const Contact = lazy(() => import('./Components/Contact'));
 const Feature = lazy(() => import('./Components/Feature'));
 const Meeting = lazy(() => import('./Components/Meeting'));
+const Modal = lazy(() => import('./Components/Modal'));
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="feature" element={<Feature />} />
+            <Route path="verify" element={<Modal />} />
             <Route path="meeting/:meetingId" element={<Meeting />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
